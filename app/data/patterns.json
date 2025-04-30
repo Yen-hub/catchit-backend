@@ -1,0 +1,57 @@
+{
+    "metadata": {
+        "last_updated": "2025-04-17T02:54:05.757314",
+        "version": "1.0.0"
+    },
+    "code_patterns": {
+        "powershell_execution": {
+            "patterns": [
+                "(?i)powershell[\\s-]+(enc|encode)",
+                "(?i)powershell.*bypass.*executionpolicy",
+                "(?i)powershell.*downloadstring"
+            ],
+            "severity": "high",
+            "description": "PowerShell execution patterns often used in malware"
+        },
+        "system_manipulation": {
+            "patterns": [
+                "(?i)reg.*delete",
+                "(?i)taskkill.*\\/f",
+                "(?i)netsh.*firewall.*disable"
+            ],
+            "severity": "high",
+            "description": "System manipulation attempts"
+        },
+        "data_exfiltration": {
+            "patterns": [
+                "(?i)(ftp|http).*upload",
+                "(?i)telegram.*bot.*api",
+                "(?i)discord.*webhook"
+            ],
+            "severity": "high",
+            "description": "Potential data exfiltration patterns"
+        }
+    },
+    "file_patterns": {
+        "suspicious_extensions": {
+            "patterns": [
+                ".exe",
+                ".scr",
+                ".bat",
+                ".vbs",
+                ".ps1"
+            ],
+            "severity": "medium",
+            "description": "Potentially dangerous file extensions"
+        },
+        "obfuscation": {
+            "patterns": [
+                "(?i)base64_decode",
+                "(?i)chr\\(\\d+\\)",
+                "(?i)eval\\("
+            ],
+            "severity": "high",
+            "description": "Code obfuscation patterns"
+        }
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "metadata": {
+        "last_updated": "2025-04-17T02:54:05.758612",
+        "version": "1.0.0"
+    },
+    "pe_characteristics": {
+        "suspicious_sections": {
+            "names": [
+                "UPX",
+                "ASPack",
+                "FSG",
+                "MEW"
+            ],
+            "severity": "medium",
+            "description": "Known packer sections"
+        },
+        "suspicious_imports": {
+            "dlls": [
+                "wininet.dll",
+                "urlmon.dll",
+                "shell32.dll"
+            ],
+            "functions": [
+                "CreateRemoteThread",
+                "VirtualAlloc",
+                "WriteProcessMemory"
+            ],
+            "severity": "high",
+            "description": "Commonly abused Windows APIs"
+        }
+    },
+    "archive_characteristics": {
+        "compression_ratio": {
+            "max_ratio": 1000,
+            "severity": "high",
+            "description": "Maximum allowed compression ratio (zip bomb detection)"
+        },
+        "suspicious_paths": {
+            "patterns": [
+                "__MACOSX/",
+                ".DS_Store",
+                "Thumbs.db"
+            ],
+            "severity": "low",
+            "description": "Hidden or system files in archives"
+        }
+    },
+    "entropy_thresholds": {
+        "executable": {
+            "threshold": 7.0,
+            "severity": "medium",
+            "description": "Maximum entropy for executable files"
+        },
+        "text": {
+            "threshold": 6.0,
+            "severity": "medium",
+            "description": "Maximum entropy for text files"
+        }
+    }
+}

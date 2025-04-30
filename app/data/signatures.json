@@ -1,0 +1,26 @@
+{
+    "metadata": {
+        "last_updated": "2025-04-17T02:54:05.756120",
+        "version": "1.0.0"
+    },
+    "file_signatures": {
+        "44d88612fea8a8f36de82e1278abb02f": {
+            "name": "Eicar Test File",
+            "type": "test",
+            "severity": "low",
+            "description": "Standard antivirus test file"
+        },
+        "e4968ef99266df7c9a1f0637d2389dab": {
+            "name": "Wannacry Sample",
+            "type": "ransomware",
+            "severity": "critical",
+            "description": "WannaCry ransomware sample"
+        },
+        "b7d44eb613bb3c85430a7d76771bd1f3": {
+            "name": "Zeus Banking Trojan",
+            "type": "trojan",
+            "severity": "high",
+            "description": "Zeus/Zbot banking trojan sample"
+        }
+    }
+}

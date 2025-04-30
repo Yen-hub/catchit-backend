@@ -1,0 +1,62 @@
+# Python-specific
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.whl
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environment
+venv/
+.env/
+env/
+.venv/
+
+# Flask-specific
+instance/
+*.sqlite
+*.db
+config.py
+
+# Environment variables and secrets
+.env
+.env.local
+.env.development
+.env.production
+*.pem
+*.key
+*.cert
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.log.*
+*.cache
+cache/
+tmp/
+temp/
+
+# Testing and coverage
+.coverage
+coverage.xml
+*.cover
+.pytest_cache/
+htmlcov/
+
+# Dependency lock files (optional, include if not using)
+# requirements.txt
+# Pipfile.lock
